@@ -1,0 +1,11 @@
+<div class="product-page">
+  <h1>{{ product.name }}</h1>
+  <h2>R${{ product.price }}</h2>
+  <p><strong>Detalhes:</strong> {{ product.description }}</p>
+
+  <form action="/products/delete/{{ product._id }}" method="post">
+    <button type="submit">Excluir</button>
+  </form>
+  <a href="/products/edit/{{ product._id}}">Editar</a>
+
+</div>

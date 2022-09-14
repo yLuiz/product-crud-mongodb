@@ -1,0 +1,26 @@
+<h1>Produtos</h1>
+{{#if products}}
+<ul class="products">
+  {{#each products}}
+  <li class="product" type="none"> 
+    <div class="image">
+
+    </div>
+    <div class="details">
+      <h3 title="{{ this.name }}">{{this.name}}</h3>
+      <p>Preço: R${{this.price}}</p>
+      <details>
+        <summary>Descrição</summary>
+        <p>{{this.description}}</p>
+      </details>
+      <a href="products/details/{{this._id}}">Saber mais</a>
+    </div>
+
+  </li>
+  {{/each}}
+</ul>
+
+{{else}}
+<p>Não produtos cadastrados!</p>
+
+{{/if}}
